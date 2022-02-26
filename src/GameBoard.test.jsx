@@ -74,3 +74,13 @@ test("Pressing a button swaps two letters", () => {
 
     expect(screen.getByLabelText("ehllo")).toBeInTheDocument();
 });
+
+test("Solving the anagram shows a message", () => {
+    render(
+        <GameBoard word="hello" scrambledWord="ehllo" initialLines={[]} />
+    );
+
+    userEvent.click(screen.getByTestId("button-1"));
+
+    expect(screen.getByText("WELL DONE")).toBeInTheDocument();
+});

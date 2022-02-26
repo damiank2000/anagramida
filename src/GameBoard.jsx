@@ -90,6 +90,9 @@ export default function GameBoard({ word, scrambledWord, initialLines }) {
                 ))}
             </GridDisplay>
             <WordDisplay word={unscrambledWord} />
+            {unscrambledWord === word &&
+                <h1>WELL DONE</h1>
+            }
         </>
     );
 }

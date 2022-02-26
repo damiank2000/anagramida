@@ -1,10 +1,11 @@
 import GameBoard from "./GameBoard";
 import { useScrambler } from "./useScrambler";
+import { useData } from "./useData";
 
 const generateRandomLines = (word) => {
 
     const highestColumn = word.length;
-    const numberOfRows = Math.floor(Math.random() * 10) + 1;
+    const numberOfRows = Math.floor(Math.random() * 20) + 1;
 
     let rows = new Array();
     for (var i = 0; i < numberOfRows; i++) {
@@ -18,9 +19,9 @@ const generateRandomLines = (word) => {
 export default function Game() {
 
     const { scrambleWord } = useScrambler();
+    const words = useData();
 
-    // const word = "anagramida";
-    const word = "cat"
+    const word = words[Math.floor(Math.random() * words.length)];
     const lines = generateRandomLines(word);
     const scrambledWord = scrambleWord(word, lines);
 
