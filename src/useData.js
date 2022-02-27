@@ -1,5 +1,9 @@
+import { useRandomNumberGenerator } from "./useRandomNumberGenerator";
+
 export function useData() {
-    return [
+    const { getRandomNumberBetween } = useRandomNumberGenerator();
+
+    const words = [
         "ability",
         "able",
         "about",
@@ -1000,4 +1004,12 @@ export function useData() {
         "your",
         "yourself"
     ];
+
+    const getRandomWord = () => {
+        return words[getRandomNumberBetween(0, words.length - 1)];
+    }
+
+    return {
+        getRandomWord
+    };
 }

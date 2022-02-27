@@ -4,9 +4,9 @@ import { useScrambler } from "./useScrambler";
 import { useData } from "./useData";
 
 export default function Game() {
+    const { getRandomWord } = useData();
     const { getRandomNumberBetween } = useRandomNumberGenerator();
     const { scrambleWord } = useScrambler();
-    const words = useData();
 
     const generateRandomLines = (word) => {
         const highestColumn = word.length;
@@ -20,7 +20,7 @@ export default function Game() {
         return lines;
     };
 
-    const word = words[getRandomNumberBetween(0, words.length - 1)];
+    const word = getRandomWord();
     const lines = generateRandomLines(word);
     const scrambledWord = scrambleWord(word, lines);
 
