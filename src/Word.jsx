@@ -22,7 +22,7 @@ const Letter = styled.div`
 `;
 
 
-export default function WordDisplay({ word }) {
+export default function Word({ word }) {
     return (
         <WordContainer aria-label={word}>
             {[...word].map((letter, index) => (
