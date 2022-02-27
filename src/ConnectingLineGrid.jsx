@@ -13,24 +13,23 @@ const LineRow = styled.div`
     justify-content: space-between;
 `;
 
-const DownwardLine = styled.div`
+const VerticalLine = styled.div`
     width: 16px;
     height: 16px;
     background-color: gray;
     border-bottom: none;
 `;
 
-const LineContainer = styled.div`
-    width: 100%;
-    height: 16px;
-    background-color: white;
-    border-bottom: none;
-`;
-
-const Line = styled.div`
+const HorizontalLine = styled.div`
     width: 100%;
     height: 2px;
     background-color: black;
+`;
+
+const NoHorizontalLine = styled.div`
+    width: 100%;
+    height: 16px;
+    background-color: white;
 `;
 
 export default function ConnectingLineGrid({ lines, scrambledWord }) {
@@ -40,11 +39,11 @@ export default function ConnectingLineGrid({ lines, scrambledWord }) {
                 <LineRow key={`line-row-${index}`} data-testid={`line-row-${index + 1}`}>
                     {[...scrambledWord].map((_, index) => (
                         <React.Fragment key={index}>
-                            <DownwardLine />
+                            <VerticalLine />
                             {index < scrambledWord.length - 1 &&
                                 (index === (line.column - 1) ?
-                                    <Line /> :
-                                    <LineContainer />)
+                                    <HorizontalLine /> :
+                                    <NoHorizontalLine />)
                             }
                         </React.Fragment>
                     ))}
