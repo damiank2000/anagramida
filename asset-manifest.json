@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/anagramida/static/css/main.e6c13ad2.css",
+    "main.js": "/anagramida/static/js/main.6ec697d0.js",
+    "index.html": "/anagramida/index.html",
+    "main.e6c13ad2.css.map": "/anagramida/static/css/main.e6c13ad2.css.map",
+    "main.6ec697d0.js.map": "/anagramida/static/js/main.6ec697d0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.6ec697d0.js"
+  ]
+}
