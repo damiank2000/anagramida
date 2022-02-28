@@ -17,10 +17,10 @@ export default function GameBoard({ word, scrambledWord, initialLines }) {
 
     return (
         <>
-            <Word word={scrambledWord} />
+            <Word word={scrambledWord} compareWord={scrambledWord} />
             <ButtonRow numberOfButtons={scrambledWord.length - 1} onButtonClicked={handleButtonClicked} />
             <ConnectingLineGrid lines={lines} scrambledWord={scrambledWord} />
-            <Word word={unscrambledWord} />
+            <Word word={unscrambledWord} compareWord={word} />
             {unscrambledWord === word &&
                 <h1>WELL DONE</h1>
             }
