@@ -23,6 +23,15 @@ const ButtonContainer = styled.div`
 const Button = styled.button`
     width: 32px;
     height: 32px;
+    background-color: palegoldenrod;
+    border: 0;
+    border-radius: 4px;
+    font-size: larger;
+    font-weight: bold;
+
+    &:hover {
+        background-color: goldenrod;
+    }
 `;
 
 export default function ButtonRow({ numberOfButtons, onButtonClicked }) {
@@ -46,7 +55,7 @@ export default function ButtonRow({ numberOfButtons, onButtonClicked }) {
                         data-testid={`button-${buttonIndex}`}
                         onClick={() => handleButtonClicked(buttonIndex)}
                     >
-                        v
+                        +
                     </Button>
                 </ButtonContainer>
             );
