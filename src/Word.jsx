@@ -14,6 +14,8 @@ const Letter = styled.div`
     width: 16px;
     height: 16px;
     font-weight: bold;
+    font-size: x-large;
+    padding: 0.2em;
     align-items: center;
 `;
 

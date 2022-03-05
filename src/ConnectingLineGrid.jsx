@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const GridContainer = styled.div`
-    padding: 0 8px 0 8px;
+    padding: 0 12px 0 12px;
 `;
 
 const LineRow = styled.div`
@@ -15,7 +15,6 @@ const LineRow = styled.div`
 
 const VerticalLine = styled.div`
     width: 16px;
-    height: 16px;
     background-color: gray;
     border-bottom: none;
 `;
